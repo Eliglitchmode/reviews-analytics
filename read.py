@@ -26,9 +26,23 @@ print(len(new), ' comments in total less than 100 characters')
 print(new[0])
 
 
-good = []
-for d in data:
-	if 'good' in d:
-		good.append(d)
-print(len(good), ' comments in total mentioned good')
-print(good[1])
+# good = []
+# for d in data:
+# 	if 'good' in d:
+# 		good.append(d)
+# print(len(good), ' comments in total mentioned good')
+
+
+#List comprehension
+good = [1 for d in data if 'good' in d]
+print(good)
+
+bad = ['bad' in d for d in data]
+print(bad)
+
+# Original version
+# bad = []
+# for d in data:
+# 	bad.append('bad' in d)
+
+
