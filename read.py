@@ -24,3 +24,11 @@ for d in data:
 		new.append(d)
 print(len(new), ' comments in total less than 100 characters')
 print(new[0])
+
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print(len(good), ' comments in total mentioned good')
+print(good[1])
