@@ -13,7 +13,14 @@ print('loading complete, total ', len(data), ' rows of record')
 # print(data[1])
 
 sum_len = 0
-for d in data:
+for d in data:   # Set d as the length of each comment
 	sum_len = sum_len + len(d)
 
 print('On average the length of comment is ', sum_len/len(data))
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print(len(new), ' comments in total less than 100 characters')
+print(new[0])
